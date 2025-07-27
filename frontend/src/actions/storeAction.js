@@ -5,7 +5,7 @@ export const FETCH_STORES_FAILURE = "FETCH_STORES_FAILURE";
 export const ADD_STORE_SUCCESS = "ADD_STORE_SUCCESS";
 export const DELETE_STORE_SUCCESS = "DELETE_STORE_SUCCESS";
 
-const API_URL = "http://localhost:5000/api/stores";
+const API_URL = "https://dominos-bnqh.onrender.com/api/stores";
 
 // ✅ Fetch stores
 export const fetchStores = () => async (dispatch) => {

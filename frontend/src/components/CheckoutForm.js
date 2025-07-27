@@ -50,7 +50,7 @@ const CheckoutForm = ({ totalAmount }) => {
       }));
 
       // ✅ Step 1: Create Checkout Session
-      const response = await fetch("http://localhost:5000/api/checkout/create-checkout-session", {
+      const response = await fetch("https://dominos-bnqh.onrender.com/api/checkout/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -81,7 +81,7 @@ const CheckoutForm = ({ totalAmount }) => {
         alert("✅ Payment successful!");
 
         // ✅ Step 3: Confirm Payment on Backend
-        const confirmResponse = await fetch("http://localhost:5000/api/checkout/confirm-payment", {
+        const confirmResponse = await fetch("https://dominos-bnqh.onrender.com/api/checkout/confirm-payment", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

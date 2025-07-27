@@ -30,7 +30,7 @@ export const addMenuItem = (menuItem) => async (dispatch) => {
   try {
     dispatch({ type: ADD_MENU_REQUEST });
 
-    const { data } = await axios.post("http://localhost:5000/api/menu", menuItem, {
+    const { data } = await axios.post("https://dominos-bnqh.onrender.com/api/menu", menuItem, {
       headers: { "Content-Type": "application/json" },
     });
 
@@ -46,7 +46,7 @@ export const deleteMenuItem = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_MENU_REQUEST });
 
-    await axios.delete(`http://localhost:5000/api/menu/${id}`);// ✅ Correct DELETE request
+    await axios.delete(`https://dominos-bnqh.onrender.com/api/menu/${id}`);// ✅ Correct DELETE request
 
     dispatch({ type: DELETE_MENU_SUCCESS, payload: { id } });
     alert("DELETE MENU SUCCESS")

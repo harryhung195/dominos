@@ -24,7 +24,7 @@ import {
 
 } from "../constants/orderConstants";
 
-const API_URL = "http://localhost:5000/api/orders";
+const API_URL = "https://dominos-bnqh.onrender.com/api/orders";
 
 // ✅ Save Order
 export const saveOrder = (orderData) => async (dispatch, getState) => {
