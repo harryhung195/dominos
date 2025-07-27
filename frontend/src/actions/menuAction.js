@@ -17,7 +17,7 @@ export const fetchMenu = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_MENU_REQUEST });
 
-    const { data } = await axios.get("/api/menu"); // Change this to your actual API endpoint
+    const { data } = await axios.get("https://dominos-bnqh.onrender.com/api/menu"); // Change this to your actual API endpoint
 
     dispatch({ type: FETCH_MENU_SUCCESS, payload: data });
   } catch (error) {
