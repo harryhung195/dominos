@@ -15,7 +15,7 @@ import {
 // ✅ Fetch All Offers
 export const fetchOffers = () => async (dispatch) => {
   try {
-    const { data } = await axios.get("/api/offers");
+    const { data } = await axios.get("https://dominos-bnqh.onrender.com/api/offers");
     dispatch({ type: FETCH_OFFERS, payload: data });
   } catch (error) {
     dispatch({ 
@@ -40,7 +40,7 @@ export const claimOffer = (offer) => (dispatch, getState) => {
 // ✅ Create a New Offer (Admin Only, Using User ID)
 export const createOffer = (offer, userId) => async (dispatch) => {
   try {
-    const { data } = await axios.post("/api/offers", { ...offer, userId }); // Send userId
+    const { data } = await axios.post("https://dominos-bnqh.onrender.com/api/offers", { ...offer, userId }); // Send userId
     dispatch({ type: CREATE_OFFER_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ 
