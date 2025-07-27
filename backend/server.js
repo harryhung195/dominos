@@ -14,7 +14,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "https://dominos-beige.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://dominos-beige.vercel.app/", credentials: true }));
 
 // Connect to MongoDB
 connectDB();
